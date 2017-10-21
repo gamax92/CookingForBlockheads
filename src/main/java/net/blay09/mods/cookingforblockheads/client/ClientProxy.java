@@ -16,6 +16,7 @@ import net.blay09.mods.cookingforblockheads.client.render.OvenRenderer;
 import net.blay09.mods.cookingforblockheads.client.render.SpiceRackRenderer;
 import net.blay09.mods.cookingforblockheads.client.render.ToasterRenderer;
 import net.blay09.mods.cookingforblockheads.client.render.ToolRackRenderer;
+import net.blay09.mods.cookingforblockheads.compat.Compat;
 import net.blay09.mods.cookingforblockheads.item.ModItems;
 import net.blay09.mods.cookingforblockheads.registry.CookingRegistry;
 import net.blay09.mods.cookingforblockheads.tile.TileCookingTable;
@@ -89,6 +90,13 @@ public class ClientProxy extends CommonProxy {
         CookingRegistry.addSortButton(new SortButtonName());
         CookingRegistry.addSortButton(new SortButtonHunger());
         CookingRegistry.addSortButton(new SortButtonSaturation());
+	}
+
+	@Override
+	public void postInit(FMLPostInitializationEvent event) {
+		super.postInit(event);
+
+		event.buildSoftDependProxy(Compat.NOT_ENOUGH_ITEMS, "net.blay09.mods.cookingforblockheads.compat.NEIAddon");
 	}
 
 	@SubscribeEvent

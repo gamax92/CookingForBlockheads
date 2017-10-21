@@ -240,6 +240,8 @@ public class CookingForBlockheads {
 		event.buildSoftDependProxy(Compat.APPLECORE, "net.blay09.mods.cookingforblockheads.compat.AppleCoreAddon");
 		event.buildSoftDependProxy(Compat.MINETWEAKER, "net.blay09.mods.cookingforblockheads.compat.MineTweakerAddon");
 
+		proxy.postInit(event);
+
 		CookingRegistry.initFoodRegistry();
 	}
 

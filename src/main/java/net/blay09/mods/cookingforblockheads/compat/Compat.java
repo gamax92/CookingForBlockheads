@@ -11,4 +11,5 @@ public class Compat {
 	public static final String WAILA = "Waila";
 	public static final String APPLECORE = "AppleCore";
 	public static final String MOUSE_TWEAKS = "mousetweaks";
+	public static final String NOT_ENOUGH_ITEMS = "NotEnoughItems";
 }

@@ -5,6 +5,11 @@ repositories {
     maven {
         url "http://blay09.net:8081/artifactory/repo/"
     }
+
+	maven {
+		name = "chickenbones"
+		url = "http://chickenbones.net/maven"
+	}
 }
 
 configurations {
